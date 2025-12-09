@@ -1,0 +1,1328 @@
+2025-10-31 09:34:24,416 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:34:26,204 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:34:26,204 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:34:26,206 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:34:26,206 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:34:27,562 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:34:48,335 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:34:49,622 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:40:43,661 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:40:45,853 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:40:45,853 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:40:45,856 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:40:45,857 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:40:47,363 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:41:03,286 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:42:43,662 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:42:44,140 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:42:46,985 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:44:23,894 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:44:25,966 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:44:25,966 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:44:25,968 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:44:25,968 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:44:27,434 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:48:49,352 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:48:51,241 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:48:51,241 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:48:51,243 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:48:51,243 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:48:52,729 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:49:04,388 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:49:41,627 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:49:42,635 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:49:43,862 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:49:59,426 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:50:00,063 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:50:29,182 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:50:31,075 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:50:31,075 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:50:31,078 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:50:31,078 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:50:32,964 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:50:47,038 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:50:52,301 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:50:53,041 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:51:19,893 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:51:20,729 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:51:22,205 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:54:05,165 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:54:07,137 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:54:07,137 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:54:07,139 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:54:07,139 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:54:08,876 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:55:18,864 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:55:20,932 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:55:20,932 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:55:20,935 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:55:20,935 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:55:22,733 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:55:33,204 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:55:53,370 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:55:54,181 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:55:55,517 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:56:55,143 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:56:57,235 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:56:57,235 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:56:57,237 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:56:57,237 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:56:59,085 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:57:15,293 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:57:26,764 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:57:27,496 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:57:28,664 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:57:42,253 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:57:43,284 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:57:46,264 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:58:23,307 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:58:24,487 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:58:27,078 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:00:20,119 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 10:00:22,284 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 10:00:22,285 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 10:00:22,287 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 10:00:22,287 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xiangmuzhongjiban\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xiangmuzhongjiban\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 10:00:24,158 - travel - INFO - Langchain代理初始化成功
+2025-10-31 10:00:38,116 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:00:44,751 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:00:45,512 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:00:46,747 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:01:27,050 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:01:27,982 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:01:30,478 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:06:46,255 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 10:06:51,642 - travel - INFO - Langchain代理初始化成功
+2025-10-31 10:07:12,675 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:07:14,471 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:07:44,203 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:07:45,791 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:07:47,452 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:35:42,899 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 10:35:49,055 - travel - INFO - Langchain代理初始化成功
+2025-10-31 10:36:02,146 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 10:36:08,373 - travel - INFO - Langchain代理初始化成功
+2025-10-31 10:36:09,277 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:11,193 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:17,862 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:19,170 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:20,763 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:26,487 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:27,243 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:30,679 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:40,719 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:41,731 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:44,186 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:57,386 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:36:58,410 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:00,818 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:07,517 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:08,337 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:10,745 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:18,781 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:19,618 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:21,485 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:29,309 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:30,141 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:31,762 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:44,302 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:45,209 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:47,601 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:57,606 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:37:58,405 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:00,109 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:03,621 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:04,573 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:07,005 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:12,878 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:13,457 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:16,116 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:21,124 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:22,477 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:25,397 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:28,665 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:29,284 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:30,824 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:37,770 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:39,109 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:41,716 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:44,917 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:45,925 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:48,008 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:53,776 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:54,624 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:38:56,281 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:04,745 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:06,100 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:08,280 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:13,152 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:13,832 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:15,636 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:22,589 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:23,712 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:25,739 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:36,145 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:36,776 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:38,591 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:56,996 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:57,856 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:39:59,577 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:06,036 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:06,901 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:09,055 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:17,080 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:17,900 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:40:17,903 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:17,904 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:17,905 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:18,688 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:40:24,117 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:40:26,925 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,926 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,927 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,928 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,929 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,929 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,930 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,931 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,931 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,932 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,936 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:26,937 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:29,396 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:40:40,603 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:40,606 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:55,642 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:56,500 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:40:59,490 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:59,490 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:40:59,490 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:04,423 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:04,424 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:04,425 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:04,426 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:04,426 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:04,431 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:06,863 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:41:16,761 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:16,761 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:16,762 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:16,762 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:16,764 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:23,951 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:23,952 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:23,953 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:26,443 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:27,320 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:29,719 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:29,720 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:29,723 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:29,724 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:35,958 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:35,958 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:35,958 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:35,958 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:35,959 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:35,959 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:46,393 - ragas.executor - ERROR - Exception raised in Job[26]: OutputParserException(Failed to parse StringIO from completion {"reason": "The provided context was indeed useful in arriving at the given answer. The context explicitly states that the Forbidden City (\u6545\u5bab) was completed in the 18th year of the Yongle era of the Ming Dynasty (\u660e\u6c38\u4e50\u5341\u516b\u5e74), which matches the answer provided.", "verdict": 1}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': 'The provided ...rovided.', 'verdict': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 10:41:46,396 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:46,396 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:46,397 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:46,397 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:46,397 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:49,775 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:49,777 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:49,777 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:49,777 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:54,751 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:41:55,641 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:42:01,187 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:42:05,808 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:05,809 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:05,809 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:05,809 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:05,809 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:08,331 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:42:21,253 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:21,254 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:21,258 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:25,481 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:42:28,503 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:28,503 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:28,504 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:28,504 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:34,210 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:34,211 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,442 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,442 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,443 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,443 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,444 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,444 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,444 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,444 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,445 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:37,450 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:39,878 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:42:48,054 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:42:56,313 - ragas.executor - ERROR - Exception raised in Job[28]: OutputParserException(Failed to parse StringIO from completion {"question": "What are the three major periods of construction for the Great Wall of China?", "noncommittal": 0}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'question': 'What are th...na?', 'noncommittal': 0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 10:42:56,314 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:56,315 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:56,316 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:56,317 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:42:56,326 - openai._base_client - INFO - Retrying request to /chat/completions in 0.454190 seconds
+2025-10-31 10:42:56,326 - openai._base_client - INFO - Retrying request to /chat/completions in 0.469733 seconds
+2025-10-31 10:43:00,747 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:03,826 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:03,826 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:03,827 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:08,544 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:10,194 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:10,962 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:43:13,854 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:13,854 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:13,855 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:13,855 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:13,856 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:13,856 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:13,857 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:13,857 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:13,857 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:26,997 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:26,998 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:26,999 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:27,000 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:27,009 - ragas.executor - ERROR - Exception raised in Job[1]: TimeoutError()
+2025-10-31 10:43:31,742 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:31,742 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:31,743 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:32,653 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:43:38,442 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:38,443 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:38,444 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:38,445 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:38,445 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:38,450 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:48,241 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:48,243 - ragas.executor - ERROR - Exception raised in Job[55]: OutputParserException(Failed to parse StringIO from completion {"classifications": [{"statement": "\u53d6\u81ea\u300a\u5de6\u4f20\u300b\u4e2d\u7684 \u541b\u5b50\u542c\u4e4b\u4ee5\u5e73\u5176\u5fc3\uff0c\u5fc3\u5e73\u5fb7\u548c", "reason": "There is no mention of the origin of the name '\u5fb7\u548c\u56ed' in the given context.", "attributed": 0}]}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'classifications': [{'st...xt.", 'attributed': 0}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 10:43:48,989 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:43:51,720 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:51,720 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:54,922 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:54,923 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:54,923 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:54,924 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:43:55,701 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:44:03,805 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:03,806 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:03,806 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:03,806 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:03,807 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:12,810 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:12,811 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:12,811 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:12,811 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:12,811 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:12,812 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:12,816 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:26,081 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:44:28,906 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:28,908 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:28,919 - openai._base_client - INFO - Retrying request to /chat/completions in 0.458921 seconds
+2025-10-31 10:44:31,947 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:36,469 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:36,470 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:38,009 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:44:40,661 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:40,662 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:43,113 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:43,114 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:43,115 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:43,115 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:43,116 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:43,117 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:43,117 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:43,908 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 10:44:54,511 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:54,512 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:54,513 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:59,921 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:44:59,922 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:45:02,958 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:45:08,080 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:45:10,353 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:45:10,354 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:45:10,354 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:45:16,719 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:45:18,309 - ragas.executor - ERROR - Exception raised in Job[82]: OutputParserException(Failed to parse StringIO from completion {"reason": "The provided context was indeed useful in arriving at the given answer. The context includes detailed information about the Dingling (\u5b9a\u9675), specifically mentioning that it is the burial site of Emperor Shenzong Wanli Zhu Yijun and his two empresses, Xiaoduan and Xiaojing.", "verdict": 1}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': 'The provided ...iaojing.', 'verdict': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 10:45:28,152 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:45:32,087 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 10:46:17,999 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:03:21,858 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 11:03:28,234 - travel - INFO - Langchain代理初始化成功
+2025-10-31 11:03:29,006 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:03:31,740 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:03:38,701 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:03:39,952 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:03:41,968 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:03:45,605 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:03:46,864 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:03:49,853 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:00,236 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:00,869 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:02,537 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:10,472 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:11,480 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:13,412 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:17,341 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:31,413 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:32,291 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:33,972 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:41,607 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:50,684 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:51,532 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:53,324 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:58,583 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:04:59,388 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:00,844 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:08,063 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:08,748 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:11,151 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:19,347 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:20,479 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:22,328 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:25,127 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:25,695 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:27,388 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:31,582 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:32,480 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:34,395 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:37,463 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:38,155 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:39,687 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:43,323 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:43,879 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:46,675 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:53,611 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:54,599 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:56,463 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:05:59,579 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:00,923 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:04,460 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:07,167 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:07,814 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:09,407 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:16,755 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:17,539 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:19,602 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:24,294 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:25,238 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:27,623 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:37,498 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:38,115 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:40,006 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:44,309 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:45,318 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:46,962 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:53,711 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:54,720 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:06:56,623 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:04,473 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:05,146 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:07,006 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:12,306 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:12,957 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:14,697 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:22,601 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:22,878 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:28,242 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:34,022 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:34,673 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:39,610 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:41,105 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:43,009 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:56,517 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:07:57,314 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:08:00,122 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,123 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,123 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,124 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,124 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,124 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,125 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,125 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,126 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,126 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,126 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,126 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:00,913 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:08:04,659 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:08:08,194 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:08:24,814 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:24,815 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:24,816 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:27,941 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:27,942 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:27,943 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:33,582 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:33,583 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:33,583 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:38,451 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:38,452 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:40,797 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:08:43,601 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:43,602 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:43,602 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:43,603 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:43,603 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:43,604 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:43,604 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:46,114 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:08:55,070 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:55,070 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:55,070 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:57,517 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:59,087 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:59,087 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:08:59,840 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:01,469 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:01,470 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:01,470 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:01,470 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:07,788 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:07,792 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:07,793 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:07,793 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:07,794 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:07,794 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:14,276 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:14,277 - ragas.executor - ERROR - Exception raised in Job[22]: OutputParserException(Failed to parse StringIO from completion {"reason": "the provided context does not mention the specific poem '\u65e9\u77e5\u6709\u76d8\u5c71\uff0c\u4f55\u5fc5\u4e0b\u6c5f\u5357' attributed to Emperor Qianlong. The context discusses other aspects of Qianlong's visit to Pan Mountain but does not provide the information needed to arrive at the given answer.", "verdict": 0}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': "the provided ... answer.", 'verdict': 0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:09:14,280 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:16,846 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:16,847 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:20,088 - ragas.executor - ERROR - Exception raised in Job[18]: OutputParserException(Failed to parse StringIO from completion {"reason": "the provided context discusses the Great Wall of China and its features, which is unrelated to the question about the '\u91d1\u51e4\u9881\u8bcf' ceremony.", "verdict": 0}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': "the provided ...eremony.", 'verdict': 0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:09:20,088 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:20,090 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:20,092 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:24,700 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:24,703 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:27,850 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:27,850 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:27,850 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:27,851 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:27,851 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:27,851 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:34,541 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:37,045 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:37,796 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:37,797 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:37,797 - ragas.executor - ERROR - Exception raised in Job[21]: OutputParserException(Failed to parse StringIO from completion {"properties": {"text": {"title": "Text", "type": "string"}}, "required": ["text"], "title": "StringIO", "type": "object"}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'properties': {'text': {...ngIO', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:09:37,799 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:44,394 - ragas.executor - ERROR - Exception raised in Job[28]: OutputParserException(Failed to parse StringIO from completion {"properties": {"text": {"title": "Text", "type": "string"}}, "required": ["text"], "title": "StringIO", "type": "object"}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'properties': {'text': {...ngIO', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:09:44,394 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:44,394 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:44,395 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:44,395 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:45,949 - ragas.executor - ERROR - Exception raised in Job[9]: OutputParserException(Invalid json output: {
+    "statements": [
+        {
+            "statement": "长城的修建始于春秋战国时期。",
+            "reason": "The context explicitly mentions that the earliest construction of the Great Wall was during the Spring and Autumn and Warring States periods.",
+            "verdict": 1
+        },
+        {
+            "statement": "故宫是在明朝永乐年间开始建造的。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        },
+        {
+            "statement": "故宫于明永乐十八年（1420年）建成。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        },
+        {
+            "statement": "从时间上看，长城的历史比故宫更为久远。",
+            "reason": "The context mentions the Great Wall's construction dates back to the Spring and Autumn and Warring States periods, which is earlier than any mention of the Forbidden City.",
+            "verdict": 1
+        },
+        {
+            "statement": "中国最早的长城修筑可以追溯到公元前7世纪左右的楚国。",
+            "reason": "The context states that the earliest construction of the Great Wall was by the State of Chu during the Spring and Autumn and Warring States periods, which aligns with the 7th century BCE.",
+            "verdict": 1
+        },
+        {
+            "statement": "楚国时期的长城被称为“方城”。",
+            "reason": "The context mentions that the Great Wall built by the State of Chu was referred to as "万城" or "方城".",
+            "verdict": 1
+        },
+        {
+            "statement": "秦朝、汉朝以及明朝等时期都有大规模的长城修筑活动。",
+            "reason": "The context details large-scale construction activities during the Qin, Han, and Ming dynasties.",
+            "verdict": 1
+        },
+        {
+            "statement": "明朝时期的长城是今天所见长城的主要部分。",
+            "reason": "The context states that the Ming Dynasty's Great Wall is what we see today.",
+            "verdict": 1
+        },
+        {
+            "statement": "明朝时期的长城西起嘉峪关，东至鸭绿江边的虎山。",
+            "reason": "The context explicitly mentions the starting and ending points of the Ming Dynasty's Great Wall.",
+            "verdict": 1
+        },
+        {
+            "statement": "明朝时期的长城全长超过7000公里。",
+            "reason": "The context states that the Ming Dynasty's Great Wall was over 7,000 kilometers long.",
+            "verdict": 1
+        },
+        {
+            "statement": "故宫又名紫禁城。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        },
+        {
+            "statement": "故宫始建于明朝第三个皇帝朱棣在位期间。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        },
+        {
+            "statement": "故宫的建设始于公元1406年。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        },
+        {
+            "statement": "故宫于1420年正式完工并启用。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        },
+        {
+            "statement": "故宫是中国古代皇宫建筑群中规模最大、保存最完整的例子。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        },
+        {
+            "statement": "故宫是明清两代共二十四位皇帝居住和处理政务的地方。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        },
+        {
+            "statement": "长城的历史要比故宫早得多。",
+            "reason": "The context mentions the Great Wall's construction dates back to the Spring and Autumn and Warring States periods, which is earlier than any mention of the Forbidden City.",
+            "verdict": 1
+        },
+        {
+            "statement": "长城的修筑是一个跨越多个朝代的过程。",
+            "reason": "The context details construction activities across multiple dynasties, including Qin, Han, and Ming.",
+            "verdict": 1
+        },
+        {
+            "statement": "故宫是明朝一次性规划并完成的宏伟工程。",
+            "reason": "The context does not provide any information about the Forbidden City (故宫).",
+            "verdict": 0
+        }
+    ]
+}
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:09:52,102 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:52,103 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:52,107 - ragas.executor - ERROR - Exception raised in Job[30]: OutputParserException(Failed to parse StringIO from completion {"reason": "The provided context was indeed useful in arriving at the given answer. The context includes detailed information about the construction of the Great Wall during the Spring and Autumn Period and the Warring States Period, which directly supports the answer.", "verdict": 1}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': 'The provided ... answer.', 'verdict': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:09:55,319 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:55,319 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:09:55,320 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-10-31 11:09:55,326 - ragas.executor - ERROR - Exception raised in Job[5]: BadRequestError(Error code: 400 - {'error': {'code': 'data_inspection_failed', 'param': None, 'message': 'Output data may contain inappropriate content.', 'type': 'data_inspection_failed'}, 'id': 'chatcmpl-cd05635b-ed6e-4a3e-b8fc-a506a0523f8d', 'request_id': 'cd05635b-ed6e-4a3e-b8fc-a506a0523f8d'})
+2025-10-31 11:09:56,108 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:10:00,575 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:00,579 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:00,580 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,431 - ragas.executor - ERROR - Exception raised in Job[16]: OutputParserException(Invalid json output: {"output_string": "{\"question\": \"What is the \\\"Golden Phoenix Edict\\\" ceremony?\", \"noncommittal\": 0}", "prompt_value": "The output string did not satisfy the constraints given in the prompt. Fix the output string and return it.\nPlease return the output in a JSON format that complies with the following schema as specified in JSON Schema:\n{\"properties\": {\"text\": {\"title\": \"Text\", \"type\": \"string\"}}, \"required\": [\"text\"], \"title\": \"StringIO\", \"type\": \"object\"}Do not use single quotes in your response but double quotes,properly escaped with a backslash.\n\n-----------------------------\n\nNow perform the same with the following input\ninput: {\n    \"output_string\": \"{\\\\n\",\n    \"prompt_value\": \"Generate a question for the given answer and Identify if answer is noncommittal. Give noncommittal as 1 if the answer is noncommittal and 0 if the answer is committal. A noncommittal answer is one that is evasive, vague, or ambiguous. For example, \\\"I don't know\\\" or \\\"I'm not sure\\\" are noncommittal answers\nPlease return the output in a JSON format that complies with the following schema as specified in JSON Schema:\n{\\\"properties\\\": {\\\"question\\\": {\\\"title\\\": \\\"Question\\\", \\\"type\\\": \\\"string\\\"}, \\\"noncommittal\\\": {\\\"title\\\": \\\"Noncommittal\\\", \\\"type\\\": \\\"integer\\\"}}, \\\"required\\\": [\\\"question\\\", \\\"noncommittal\\\"], \\\"title\\\": \\\"ResponseRelevanceOutput\\\", \\\"type\\\": \\\"object\\\"}Do not use single quotes in your response but double quotes,properly escaped with a backslash.\\n\\n--------EXAMPLES-----------\\nExample 1\\nInput: {\\n    \\\"response\\\": \\\"Albert Einstein was born in Germany.\\\"\\n}\\nOutput: {\\n    \\\"question\\\": \\\"Where was Albert Einstein born?\\\",\\n    \\\"noncommittal\\\": 0\\n}\\n\\nExample 2\\nInput: {\\n    \\\"response\\\": \\\"I don't know about the  groundbreaking feature of the smartphone invented in 2023 as am unaware of information beyond 2022. \\\"\\n}\\nOutput: {\\n    \\\"question\\\": \\\"What was the groundbreaking feature of the smartphone invented in 2023?\\\",\\n    \\\"noncommittal\\\": 1\\n}\\n-----------------------------\\n\\nNow perform the same with the following input\\ninput: {\\n    \\\"response\\\": \\\"似乎在尝试查找“金凤颁诏”的相关信息时，再次出现了关于八达岭长城和故宫的资料。这表明我的搜索可能没有直接命中您所询问的主题。让我用不同的方式来解释一下“金凤颁诏”。\\\\n\\\\n“金凤颁诏”是指明清时期皇帝颁布诏书的一种仪式。当有重要诏书需要向全国发布时，会在天安门城楼上举行这一仪式。仪式中会使用到一个特制的装置——“金凤”，它实际上是一个镀金的铜凤凰模型，被用来从天安门城楼向下传递诏书。诏书会被系在金凤的口中，然后缓缓降下，象征着皇恩浩荡、圣旨下达。这个过程不仅具有实际的功能性，也充满了象征意义，体现了皇权的威严与神圣。\\\\n\\\\n如果您想了解更多细节或有其他问题，请告诉我！ [{'title': './file_path/（六）长城.txt', 'content': '北京的八达岭长城是我国万里长城中独具代表性的一段。这里地势险要，城关坚固，是长城重要关口居庸关的前哨，八达岭长城历来是兵家必争之地。这里为什么叫八达岭呢？因为从这里往北可达延庆、赤城；往南可达昌平、北京市内；往东可达永宁、四海、密云；往西可达沙城、宣化、怀来、大同、张家口；道路四通八达，故称八达岭。八达岭是居庸关的门户。因此古人曾说“居庸之险，不在关，而在八达岭”。\\\\\\\\n    八达岭长城是由关城，岔道城，墙体，敌台，烽火台，排洪洞等建筑组成，是明长城中最典型的一段。是北京境内长城中保存最完好，工程质量最佳，结构最严谨的一段。其中墙体长约12千米，敌台24座，墙台4座。\\\\\\\\n    关城：关城建于明代，面积约 5000平方米，城高7.5米。关城东门上刻“居庸外镇”。意为居庸关外又一重镇。西门上刻“北门锁钥”。意思是此处是军事重镇，好像北京的门户上的一把锁，一旦被打开，整个北京也就门户洞开了。\\\\\\\\n    关城内的墩台高达厚实，下部用十多层花岗岩条石垒砌，上部为城砖，宽20 多米，是长城中最壮观的墩台之一。在登城口内有明崇祯年间铸造的大炮“神威大将军”。\\\\\\\\n    岔道城：由于关城地域狭小，很难驻守大量官兵，明嘉靖三十年（1551）又在关城西北另建岔道城，城中建有守备衙门、武器弹药库、粮库、兵营等。\\\\\\\\n    墙体：墙体平均高7.8米，墙基平均宽5.8米左右，可容10人并进或5 马并骑。内侧称女儿墙，高约1米；外侧称垛墙或雉堞，高近2米。垛墙上凸出的部分称垛口，低凹的部分称堞口，每个垛9上有望孔，下由射孔。墙顶上还设由排水沟和吐水嘴，吐水嘴做成长长的石槽伸出墙外，以防雨水冲刷墙体。\\\\\\\\n    敌台：敌台是跨墙而筑，高出墙体，两层或三层的建筑，上面四面开有望孔和箭窗。里面分隔成相互连通的屋子，分别用于士卒居住和存放武器、弹药、粮食。\\\\\\\\n    墙台：墙台是何墙体在同一平面，向外突出的平台，也叫“马面”突出部位砌有垛墙，平时放哨、习武，战时兵卒可以站在突出墙体的地方从侧面攻击登城的敌人。'}, {'title': './file_path/2023北京导游词.docx', 'content': '【午门前讲故宫导游词】\\\\\\\\n\\\\\\\\n\\\\\\\\n\\\\\\\\n故宫又名紫禁城,建成于明永乐十八年,是中国保存最完整、规模最大的古代皇宫建筑群。明建文帝削藩引起燕王朱棣不满，朱棣通过“靖难之役”夺得皇位，定都南京。因北京是朱 棣的龙兴之地，亲信、势力都集中在北京，而且，北京地处北方咽喉要地，有利于抗击北元 残余势力的南犯。所以，永乐皇帝下令迁都北京。明永乐四年，明成祖朱棣下诏，正式启动 北京宫城的建设。此间动用工匠 23 万、民夫百万，至永乐十八年竣工。永乐十九年元旦吉 日，明成祖朱棣御奉天殿受朝贺，紫禁城正式启用。\\\\\\\\n\\\\\\\\n明朝自成祖朱棣到思宗朱由检，共有 14 位皇帝在紫禁城内生活起居、治理国家。清朝定都北京后继续沿用明朝的宫殿，并对部分区域进行了较大规模的改造，如：文渊阁、宁寿全宫、南三所、西五所、斋宫、毓庆宫等。另外，清朝特别重视防火，并采取了多种措施，如：对建筑进行了防火结构的改造；建立火班（消防队）；配备消防器材等。\\\\\\\\n\\\\\\\\n清朝自世祖福临到逊帝溥仪，共有 10 位皇帝在紫禁城内生活起居、治理国家。清宣统三年，末代皇帝溥仪退位。根据民国政府所答应的“关于清帝逊位后优待之条件”，清廷皇室成员仍可居住在紫禁城内廷。直至民国十三年，冯玉祥发动“北平政变”，要求溥仪“即日移出宫禁”，溥仪才搬出紫禁城。此间仍有人使用过紫禁城，那就是民国二年十月十日，袁世凯在紫禁城太和殿举行了大总统就职典礼。为此，袁世凯下令撤掉了皇帝宝座，换成西式靠椅，并取消了紫禁城前朝匾额上的满文。1925 年 10 月 10 日，紫禁城改称“故宫博物院”，正式对社会开放。\\\\\\\\n\\\\\\\\n新中国成立以后，我国政府花费巨资对紫禁城进行了维护和修缮，使紫禁城再次焕发青春。紫禁城这个名字是根据天象取的。古代天文学家将天体分为三垣四象二十八星宿。三垣是指太微垣、紫微垣、天市垣，紫微垣居天体中央，北极星又是紫微垣的中心，为天帝所居，称“紫宫”。人间的皇宫是应天象而建的，故取“紫”字。“禁”是指皇家禁地，万民莫入，故称“紫禁城”。紫禁城坐落在北京的中轴线上。其建筑布局突出了一条\\\\\\\\n\\\\\\\\n\\\\\\\\n\\\\\\\\n\\\\\\\\n\\\\\\\\n明显的中轴线，主要建筑都在其上。红砖墙、黄色琉璃瓦、青白石基座体现出了皇家的气势，突出了皇权的至高无上。紫禁城有四座城门，南面为午门、北面为神武门、东面为东华门、西面为西华门。紫禁城以乾清门前的小广场为界，南面是前朝部分，北面是后廷部分。'}]\\\"\\n}\\nOutput: "\n}"}
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:10:05,432 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,432 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,432 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,433 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,433 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,433 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,433 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,434 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,434 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,434 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,434 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:05,435 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:06,231 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:10:09,835 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:10:18,733 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:18,734 - ragas.executor - ERROR - Exception raised in Job[31]: OutputParserException(Failed to parse StringIO from completion {"classifications": [{"statement": "\u4fee\u5efa\u59cb\u4e8e\u6625\u79cb\u6218\u56fd\u65f6\u671f\u3002", "reason": "The context clearly states that the earliest construction of the Great Wall was during the Spring and Autumn and Warring States periods.", "attributed": 1}]}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'classifications': [{'st...ds.', 'attributed': 1}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:10:20,421 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:31,256 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,840 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,841 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,841 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,842 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,843 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,844 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,844 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,844 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,845 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,845 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,846 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,846 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:32,847 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:10:33,655 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:10:40,707 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:11:03,175 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:03,181 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:07,352 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:07,353 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:10,719 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:11,530 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:11,531 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:11,531 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:11,532 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:11,532 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:11,533 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:14,355 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:14,356 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:14,357 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:18,508 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:18,509 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:18,510 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:18,510 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:18,510 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:18,511 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:21,466 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:21,466 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:27,031 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:27,032 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:27,032 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:30,918 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:34,081 - ragas.executor - ERROR - Exception raised in Job[58]: OutputParserException(Failed to parse StringIO from completion {"reason": "the provided context does not mention or relate to the\u533e\u989d '\u6148\u6656\u61ff\u7949' or its meaning, which is the focus of the question and answer.", "verdict": 0}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': "the provided ... answer.", 'verdict': 0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:11:34,084 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:36,358 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,368 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,369 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,370 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,370 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,371 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,371 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,371 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,372 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,372 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,372 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,373 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,373 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:11:41,373 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:02,153 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:02,154 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:02,154 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:02,154 - ragas.executor - ERROR - Exception raised in Job[64]: OutputParserException(Failed to parse StringIO from completion {"question": "Where is the Dule Temple located and what are its historical significances?", "noncommittal": 0}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'question': 'Where is th...es?', 'noncommittal': 0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:12:02,155 - ragas.executor - ERROR - Exception raised in Job[62]: OutputParserException(Failed to parse StringIO from completion {"reason": "the provided context discusses the architecture and history of the Badaling section of the Great Wall, but does not mention the origin of the name \"\u6392\u4e91\u6bbf\" or the poem by Guo Pu.", "verdict": 0}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': 'the provided ... Guo Pu.', 'verdict': 0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:12:02,155 - ragas.executor - ERROR - Exception raised in Job[66]: OutputParserException(Failed to parse StringIO from completion {"reason": "The provided context was indeed useful in arriving at the given answer. The context includes specific information about the location of the Dule Temple, which is reflected in the answer.", "verdict": 1}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': 'The provided ... answer.', 'verdict': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:12:05,249 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:05,249 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:09,440 - ragas.executor - ERROR - Exception raised in Job[54]: OutputParserException(Failed to parse StringIO from completion {"reason": "the provided context does not mention the origin of the name '\u5fb7\u548c\u56ed' or reference the quote from\u300a\u5de6\u4f20\u300b mentioned in the answer.", "verdict": 0}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': "the provided ... answer.", 'verdict': 0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:12:09,440 - ragas.executor - ERROR - Exception raised in Job[67]: OutputParserException(Failed to parse StringIO from completion {"classifications": [{"statement": "\u84df\u53bf\u57ce\u6b66\u5b9a\u5317\u4fa7", "reason": "The exact location of Dule Temple is mentioned in the context.", "attributed": 1}]}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'classifications': [{'st...xt.', 'attributed': 1}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:12:09,440 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:12,698 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:13,453 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:12:16,218 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,219 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,219 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,219 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,219 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,220 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,220 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,220 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,220 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,221 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:16,221 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:22,987 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:12:39,020 - ragas.executor - ERROR - Exception raised in Job[63]: OutputParserException(Failed to parse StringIO from completion {"classifications": [{"statement": "\u51fa\u81ea\u664b\u4ee3\u8bd7\u4eba\u90ed\u749e\uff1a\u201c\u795e\u4ed9\u6392\u4e91\u51fa\uff0c\u4f46\u89c1\u91d1\u94f6\u53f0\u201d\u7684\u8bd7\u53e5", "reason": "There is no mention of the origin of the name '\u6392\u4e91\u6bbf' or the poet Guo Pu in the given context.", "attributed": 0}]}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'classifications': [{'st...xt.", 'attributed': 0}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:12:39,020 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:39,021 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:39,021 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:39,021 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:43,953 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:43,953 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:43,954 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:45,507 - ragas.executor - ERROR - Exception raised in Job[53]: OutputParserException(Failed to parse StringIO from completion {"statements": [{"statement": "\u5fb7\u548c\u56ed\u7684\u540d\u5b57\u5e76\u6ca1\u6709\u76f4\u63a5\u5728\u6587\u6863\u4e2d\u63d0\u53ca\u6765\u6e90\u3002", "reason": "The context does not mention the origin of the name '\u5fb7\u548c\u56ed'.", "verdict": 1}, {"statement": "\u5fb7\u548c\u56ed\u662f\u9890\u548c\u56ed\u5185\u7684\u4e00\u5904\u91cd\u8981\u5efa\u7b51\u7fa4\u3002", "reason": "The context does not provide any information about '\u5fb7\u548c\u56ed' being an important architectural complex within the Summer Palace.", "verdict": 0}, {"statement": "\u6839\u636e\u9890\u548c\u56ed\u7684\u5386\u53f2\u80cc\u666f\uff0c\u53ef\u4ee5\u63a8\u6d4b\u5fb7\u548c\u56ed\u7684\u540d\u5b57\u53ef\u80fd\u4e0e\u4e2d\u56fd\u4f20\u7edf\u6587\u5316\u4e2d\u7684\u201c\u5fb7\u201d\u4e0e\u201c\u548c\u201d\u7684\u7406\u5ff5\u6709\u5173\u3002", "reason": "The context does not provide any information to support this speculation about the name '\u5fb7\u548c\u56ed'.", "verdict": 0}, {"statement": "\u201c\u5fb7\u201d\u4e0e\u201c\u548c\u201d\u8fd9\u4e24\u4e2a\u5b57\u5728\u4e2d\u56fd\u6587\u5316\u4e2d\u4ee3\u8868\u7740\u9053\u5fb7\u4fee\u517b\u4e0e\u548c\u8c10\u5171\u5904\u7684\u4ef7\u503c\u89c2\u3002", "reason": "The context does not discuss the cultural meanings of '\u5fb7' and '\u548c'.", "verdict": 0}, {"statement": "\u5982\u679c\u9700\u8981\u66f4\u591a\u5173\u4e8e\u5fb7\u548c\u56ed\u7684\u5177\u4f53\u4fe1\u606f\u6216\u5386\u53f2\u80cc\u666f\uff0c\u53ef\u4ee5\u63d0\u4f9b\u8fdb\u4e00\u6b65\u7684\u5e2e\u52a9\u3002", "reason": "The context does not mention any offer for further assistance regarding '\u5fb7\u548c\u56ed'.", "verdict": 0}]}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'statements': [{'stateme...园'.", 'verdict': 0}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:12:45,508 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:50,219 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:50,220 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:50,223 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:51,106 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:12:54,104 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:54,105 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:58,791 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:12:58,792 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:01,069 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:13:04,057 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:04,057 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:04,058 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:04,058 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:09,299 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:14,033 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:14,034 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:14,034 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:14,035 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:16,370 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:13:24,209 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:24,209 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:24,212 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:27,368 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:27,369 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:27,370 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:27,370 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:27,370 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:27,371 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:28,165 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:13:31,957 - ragas.prompt.pydantic_prompt - WARNING - LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+2025-10-31 11:13:40,519 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:40,519 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:40,519 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:40,522 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:46,049 - ragas.executor - ERROR - Exception raised in Job[94]: OutputParserException(Failed to parse StringIO from completion {"reason": "The provided context clearly states that the excavation work of the Dingling Mausoleum started in May 1956, which directly answers the question.", "verdict": 1}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': 'The provided ...uestion.', 'verdict': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:13:46,055 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:46,056 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:46,057 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:46,823 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:51,745 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:51,746 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:51,747 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:51,748 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:57,164 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:13:57,165 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:01,770 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:01,771 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:01,772 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:01,772 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:01,773 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:01,773 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:12,149 - ragas.executor - ERROR - Exception raised in Job[86]: OutputParserException(Failed to parse StringIO from completion {"reason": "The provided context was indeed useful in arriving at the given answer. The context includes key information about the military purpose of the Great Wall, which aligns with the answer regarding defense against northern invasions.", "verdict": 1}. Got: 1 validation error for StringIO
+text
+  Field required [type=missing, input_value={'reason': 'The provided ...vasions.', 'verdict': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE )
+2025-10-31 11:14:12,149 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:12,150 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:15,283 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:15,283 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:16,955 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:21,043 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:37,477 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:14:51,759 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:15:26,804 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:33:31,639 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 11:33:38,477 - travel - INFO - Langchain代理初始化成功
+2025-10-31 11:33:39,278 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:33:41,097 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:33:50,048 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 11:33:56,578 - travel - INFO - Langchain代理初始化成功
+2025-10-31 11:35:28,302 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:35:37,841 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:35:38,776 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:35:40,457 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:36:46,159 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:36:51,485 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:36:52,401 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:36:53,415 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:37:09,077 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:37:10,073 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:37:12,373 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:37:40,051 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:37:41,122 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:37:42,159 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:38:11,995 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:38:12,837 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:38:16,164 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:38:57,625 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:38:58,174 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:39:05,889 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 11:39:06,414 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:17:22,523 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 15:17:34,792 - travel - INFO - Langchain代理初始化成功
+2025-10-31 15:42:22,375 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:42:25,659 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:42:39,005 - backoff - INFO - Backing off send_request(...) for 0.4s (requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Read timed out. (read timeout=15))
+2025-10-31 15:44:31,572 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:44:32,913 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:44:36,455 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:48:37,490 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:48:38,408 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:49:12,912 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:49:14,202 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:49:18,048 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:52:09,234 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:52:13,013 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 15:52:15,012 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
