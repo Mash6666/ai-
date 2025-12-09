@@ -82,17 +82,21 @@ DB_CONFIG = {
 
 工具示例:
 1.向量数据库查询:
+<img width="415" height="319" alt="image" src="https://github.com/user-attachments/assets/a1be60bf-5596-4b7c-88ae-0302874fd401" />
 
 2数据库查询工具:
 可以查询都有哪些景点
+<img width="416" height="201" alt="image" src="https://github.com/user-attachments/assets/5d4adcfd-c579-4c1f-a231-4821dc748272" />
 
 
 3.天气工具
+<img width="416" height="149" alt="image" src="https://github.com/user-attachments/assets/3da66144-a834-4b48-953c-338c1aa38999" />
 
 
 
 记忆+问题重写
 1.调用两个工具并输出记忆
+<img width="416" height="328" alt="image" src="https://github.com/user-attachments/assets/e100115e-652b-4bab-ad7b-7711b16eb95c" />
 
 
 
@@ -119,14 +123,24 @@ DB_CONFIG = {
 
 2.
 根据记忆可以直接问那里天气怎么样,程序问题重写然后交给代理查找工具
+<img width="416" height="190" alt="image" src="https://github.com/user-attachments/assets/1f158455-cb1a-4e14-bb26-aa31759e4c44" />
 
+<img width="415" height="230" alt="image" src="https://github.com/user-attachments/assets/4b72c23f-339d-4959-9335-0482e38b5e44" />
 
 
 来源与相关文本块
 文本框下面有来源鼠标悬浮在上面可以看到相关文本块
+<img width="416" height="181" alt="image" src="https://github.com/user-attachments/assets/1d1a84f2-f510-4bba-9110-41b844e31b4f" />
+<img width="415" height="269" alt="image" src="https://github.com/user-attachments/assets/e296e182-1705-4129-b80b-0ed3f2ae53ee" />
+
 
 
 前端介绍
 登录页
+<img width="415" height="332" alt="image" src="https://github.com/user-attachments/assets/3d041835-344d-41dc-b6d7-b7bed6cb71ef" />
+
 
 主页面
+<img width="415" height="291" alt="image" src="https://github.com/user-attachments/assets/08c4fd68-8094-4d3a-993b-dff033d02637" />
+
+
