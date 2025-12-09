@@ -1,5 +1,8 @@
 README
 用前必看:
+
+
+(由于限制,所以上传的是精简版)
 Python版本最好是Python 3.11.9 
 
 使用前请先找到目录里的requestment使用pip安装所需要的依赖
@@ -142,5 +145,6 @@ DB_CONFIG = {
 
 主页面
 <img width="415" height="291" alt="image" src="https://github.com/user-attachments/assets/08c4fd68-8094-4d3a-993b-dff033d02637" />
+
 
 
