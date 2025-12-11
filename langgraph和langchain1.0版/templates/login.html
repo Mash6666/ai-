@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI旅游助手 - 登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            padding: 40px;
+            position: relative;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .logo p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        .btn-register {
+            background: #2ecc71;
+        }
+        .btn-register:hover {
+            background: #27ae60;
+        }
+        .form-switch {
+            text-align: center;
+            margin-top: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .form-switch a {
+            color: #3498db;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        .error-message {
+            background: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s, fadeOut 0.5s 4.5s forwards;
+        }
+        .success-message {
+            background: #2ecc71;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s, fadeOut 0.5s 4.5s forwards;
+        }
+        .hidden {
+            display: none;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        .tab.active {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-10px); }
+        }
+
+        /* 消息容器样式 */
+        .message-container {
+            min-height: 60px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>AI旅游助手</h1>
+            <p>智能导游，畅游世界</p >
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" id="login-tab">登录</div>
+            <div class="tab" id="register-tab">注册</div>
+        </div>
+
+        <form method="post" action="/login" id="login-form">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">登录</button>
+        </form>
+
+        <form method="post" action="/register" id="register-form" class="hidden">
+            <div class="form-group">
+                <label for="reg-username">用户名</label>
+                <input type="text" id="reg-username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-password">密码</label>
+                <input type="password" id="reg-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">确认密码</label>
+                <input type="password" id="confirm-password" name="confirm_password" required>
+            </div>
+            <button type="submit" class="btn btn-register">注册</button>
+        </form>
+        <!-- 消息容器 -->
+        <div class="message-container">
+            {% if error %}
+            <div class="error-message" id="error-message">{{ error }}</div>
+            {% endif %}
+
+            {% if success %}
+            <div class="success-message" id="success-message">{{ success }}</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginTab = document.getElementById('login-tab');
+            const registerTab = document.getElementById('register-tab');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+
+            // 标签页切换
+            loginTab.addEventListener('click', function() {
+                loginTab.classList.add('active');
+                registerTab.classList.remove('active');
+                loginForm.classList.remove('hidden');
+                registerForm.classList.add('hidden');
+                clearMessages();
+            });
+
+            registerTab.addEventListener('click', function() {
+                registerTab.classList.add('active');
+                loginTab.classList.remove('active');
+                registerForm.classList.remove('hidden');
+                loginForm.classList.add('hidden');
+                clearMessages();
+            });
+
+            // 表单验证
+            const registerFormEl = document.getElementById('register-form');
+            if (registerFormEl) {
+                registerFormEl.addEventListener('submit', function(e) {
+                    const password = document.getElementById('reg-password').value;
+                    const confirmPassword = document.getElementById('confirm-password').value;
+
+                    if (password !== confirmPassword) {
+                        e.preventDefault();
+                        showTemporaryMessage('两次输入的密码不一致，请重新输入', 'error');
+                        return false;
+                    }
+
+                    if (password.length < 6) {
+                        e.preventDefault();
+                        showTemporaryMessage('密码长度至少6位', 'error');
+                        return false;
+                    }
+
+                    return true;
+                });
+            }
+
+            // 自动隐藏消息
+            setTimeout(() => {
+                clearMessages();
+            }, 5000);
+
+            // 点击页面其他区域隐藏消息
+            document.addEventListener('click', function() {
+                clearMessages();
+            });
+
+            // 清除消息函数
+            function clearMessages() {
+                const errorMsg = document.getElementById('error-message');
+                const successMsg = document.getElementById('success-message');
+
+                if (errorMsg) {
+                    errorMsg.style.display = 'none';
+                }
+                if (successMsg) {
+                    successMsg.style.display = 'none';
+                }
+            }
+
+            // 显示临时消息函数
+            function showTemporaryMessage(message, type) {
+                const messageContainer = document.querySelector('.message-container');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = type === 'error' ? 'error-message' : 'success-message';
+                messageDiv.textContent = message;
+                messageDiv.id = 'temp-message';
+
+                messageContainer.innerHTML = '';
+                messageContainer.appendChild(messageDiv);
+
+                // 5秒后自动消失
+                setTimeout(() => {
+                    messageDiv.remove();
+                }, 5000);
+            }
+
+            // 表单提交后清除消息
+            loginForm.addEventListener('submit', function() {
+                clearMessages();
+            });
+
+            registerForm.addEventListener('submit', function() {
+                clearMessages();
+            });
+        });
+    </script>
+</body>
+</html>

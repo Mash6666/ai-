@@ -1,0 +1,816 @@
+2025-10-31 09:04:14,497 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:04:26,804 - dashscope - ERROR - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-31 09:04:26,805 - travel - ERROR - 添加文件到知识库失败：HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-31 09:04:27,244 - travel - ERROR - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 142, in text_spliter_add
+    vector_db.add_documents(chunks)
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_core\vectorstores\base.py", line 288, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_chroma\vectorstores.py", line 623, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 150, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 78, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 61, in _embed_with_retry
+    resp = embeddings.client.call(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\embeddings\text_embedding.py", line 49, in call
+    return super().call(model=model,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\client\base_api.py", line 440, in call
+    return request.call()
+           ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 103, in call
+    output = next(response)
+             ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 376, in _handle_request
+    raise e
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 359, in _handle_request
+    response = session.post(url=self.url,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-31 09:04:27,324 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:04:27,326 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 142, in text_spliter_add
+    vector_db.add_documents(chunks)
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_core\vectorstores\base.py", line 288, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_chroma\vectorstores.py", line 623, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 150, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 78, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 61, in _embed_with_retry
+    resp = embeddings.client.call(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\embeddings\text_embedding.py", line 49, in call
+    return super().call(model=model,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\client\base_api.py", line 440, in call
+    return request.call()
+           ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 103, in call
+    output = next(response)
+             ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 376, in _handle_request
+    raise e
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 359, in _handle_request
+    response = session.post(url=self.url,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EF9AD9410>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:04:27,355 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:04:27,356 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:04:27,368 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:04:27,369 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:04:39,519 - dashscope - ERROR - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-31 09:04:39,520 - travel - ERROR - 添加文件到知识库失败：HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-31 09:04:39,520 - travel - ERROR - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 142, in text_spliter_add
+    vector_db.add_documents(chunks)
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_core\vectorstores\base.py", line 288, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_chroma\vectorstores.py", line 623, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 150, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 78, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 61, in _embed_with_retry
+    resp = embeddings.client.call(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\embeddings\text_embedding.py", line 49, in call
+    return super().call(model=model,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\client\base_api.py", line 440, in call
+    return request.call()
+           ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 103, in call
+    output = next(response)
+             ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 376, in _handle_request
+    raise e
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 359, in _handle_request
+    response = session.post(url=self.url,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+2025-10-31 09:04:39,549 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:04:39,549 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 142, in text_spliter_add
+    vector_db.add_documents(chunks)
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_core\vectorstores\base.py", line 288, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_chroma\vectorstores.py", line 623, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 150, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 78, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 61, in _embed_with_retry
+    resp = embeddings.client.call(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\embeddings\text_embedding.py", line 49, in call
+    return super().call(model=model,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\client\base_api.py", line 440, in call
+    return request.call()
+           ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 103, in call
+    output = next(response)
+             ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 376, in _handle_request
+    raise e
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\dashscope\api_entities\http_request.py", line 359, in _handle_request
+    response = session.post(url=self.url,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/embeddings/text-embedding/text-embedding (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015EFA119850>: Failed to resolve 'dashscope.aliyuncs.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:04:54,777 - backoff - INFO - Backing off send_request(...) for 0.0s (requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Read timed out. (read timeout=15))
+2025-10-31 09:05:25,640 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:06:39,662 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:07:41,238 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:08:03,891 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:08:25,105 - dashscope - ERROR - 
+2025-10-31 09:08:53,840 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:09:15,071 - dashscope - ERROR - 
+2025-10-31 09:09:29,591 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:09:52,733 - dashscope - ERROR - 
+2025-10-31 09:10:03,319 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:10:48,456 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:10:48,456 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:10:48,459 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:10:48,459 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:11:27,900 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:11:47,614 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:11:50,781 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:12:29,524 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:12:30,081 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:13:41,702 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:13:42,447 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:13:43,443 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:14:17,365 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:14:19,370 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:14:19,370 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:14:19,372 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:14:19,372 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:14:20,923 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:14:40,092 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:14:51,551 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:14:52,348 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:15:21,712 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:15:23,288 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:15:25,059 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:15:47,968 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:15:49,195 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:15:50,671 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:16:56,117 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:16:56,708 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:17:31,100 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:17:32,088 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:17:33,359 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:20:34,902 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:20:37,253 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:20:37,254 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:20:37,256 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:20:37,256 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:20:39,047 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:22:41,334 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:22:43,660 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:22:43,660 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:22:43,663 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:22:43,663 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:22:45,448 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:23:00,398 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:23:01,954 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:32:14,163 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-31 09:32:16,396 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-10-31 09:32:16,396 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-10-31 09:32:16,399 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:32:16,399 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-10-31 09:32:18,201 - travel - INFO - Langchain代理初始化成功
+2025-10-31 09:32:38,940 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-31 09:32:40,611 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"

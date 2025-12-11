@@ -1,0 +1,855 @@
+2025-12-10 19:38:41,160 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 19:38:43,663 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-10 19:38:43,663 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-10 19:38:43,666 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-10 19:38:43,666 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 125, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash3\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 165, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-10 19:38:45,602 - travel - INFO - Langchain代理初始化成功
+2025-12-10 19:39:29,438 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 19:39:31,961 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:37:57,402 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:37:57,403 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:37:57,405 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:37:57,405 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:37:57,407 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:37:57,407 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:37:57,408 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:37:57,408 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:37:57,409 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:37:57,410 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:37:57,411 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:37:57,411 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:37:57,451 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:37:59,343 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:38:27,343 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:38:27,343 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:38:27,344 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:38:27,345 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:38:27,346 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:38:27,346 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:38:27,347 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:38:27,347 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:38:27,348 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:38:27,348 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:38:27,349 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:38:27,349 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:38:27,371 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:38:29,041 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:38:43,442 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:39:11,530 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:39:11,530 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:39:11,532 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:39:11,532 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:39:11,534 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:39:11,534 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:39:11,535 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:39:11,535 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:39:11,537 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:39:11,537 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:39:11,538 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:39:11,538 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:39:11,570 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:39:13,620 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:39:28,318 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:40:04,985 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:40:07,857 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:43:21,200 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:43:21,200 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:43:21,201 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:43:21,201 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:43:21,203 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:43:21,203 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:43:21,204 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:43:21,204 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:43:21,205 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:43:21,205 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:43:21,207 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:43:21,207 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:43:21,235 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:43:23,075 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:45:07,101 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:45:07,101 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:45:07,105 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:45:07,105 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:45:07,106 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:45:07,106 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:45:07,108 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:45:07,108 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:45:07,109 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:45:07,109 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:45:07,110 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:45:07,110 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:45:07,140 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:45:08,911 - dashscope - ERROR - 
+2025-12-10 20:45:17,472 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:45:17,472 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:45:17,474 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:45:17,474 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:45:17,475 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:45:17,475 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:45:17,476 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:45:17,476 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:45:17,477 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:45:17,477 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:45:17,479 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:45:17,479 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:45:17,501 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:45:19,257 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:45:48,695 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:46:03,371 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:46:14,315 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:48:17,350 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:48:17,350 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:48:17,352 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:48:17,352 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:48:17,353 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:48:17,353 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:48:17,354 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:48:17,354 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:48:17,355 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:48:17,355 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:48:17,356 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:48:17,356 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 135, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 179, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:48:17,384 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:48:19,410 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:49:29,608 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:49:29,609 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:49:29,611 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:49:29,611 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 178, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:49:29,612 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:49:29,612 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:49:29,614 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:49:29,614 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 178, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:49:29,615 - travel - ERROR - 添加文件到知识库失败：No module named 'docx2txt'
+2025-12-10 20:49:29,615 - travel - ERROR - No module named 'docx2txt'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+2025-12-10 20:49:29,616 - travel - ERROR - 重置数据库失败：name 'chunks' is not defined
+2025-12-10 20:49:29,616 - travel - ERROR - name 'chunks' is not defined
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 57, in load
+    import docx2txt
+ModuleNotFoundError: No module named 'docx2txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 178, in text_spliter_add
+    documents=chunks,
+              ^^^^^^
+NameError: name 'chunks' is not defined
+2025-12-10 20:49:29,646 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:49:31,820 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:50:33,592 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:50:36,853 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-10 20:50:36,854 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-10 20:50:36,856 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-10 20:50:36,857 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 174, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-10 20:50:40,728 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:50:58,337 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:51:00,847 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-10 20:51:00,847 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-10 20:51:00,849 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-10 20:51:00,849 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 174, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-10 20:51:03,385 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:51:33,217 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:51:44,584 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:51:47,116 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:53:03,687 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:53:08,716 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-10 20:55:21,380 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-10 20:55:24,051 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-10 20:55:24,051 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-10 20:55:24,053 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-10 20:55:24,053 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 134, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 174, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-10 20:55:26,638 - travel - INFO - LangGraph工作流初始化成功
+2025-12-10 20:55:49,994 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"

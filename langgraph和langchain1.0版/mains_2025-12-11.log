@@ -1,0 +1,787 @@
+2025-12-11 11:23:55,528 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 11:23:58,125 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 11:23:58,125 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 11:23:58,127 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:23:58,127 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 177, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:24:00,424 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 11:24:21,349 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:24:21,356 - travel - ERROR - SQL执行错误: (pymysql.err.ProgrammingError) (1146, "Table 'travel.scenic_spots' doesn't exist")
+[SQL: SELECT * FROM scenic_spots WHERE city='北京']
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 11:24:30,036 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:24:32,952 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:24:32,954 - travel - ERROR - React LangGraph chat错误: 'Input to ChatPromptTemplate is missing variables {\'"query"\', \'"response"\'}.  Expected: [\'"query"\', \'"response"\'] Received: []\nNote: if you intended {"query"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{"query"}}\'.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/INVALID_PROMPT_INPUT '
+2025-12-11 11:24:32,954 - travel - ERROR - 'Input to ChatPromptTemplate is missing variables {\'"query"\', \'"response"\'}.  Expected: [\'"query"\', \'"response"\'] Received: []\nNote: if you intended {"query"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{"query"}}\'.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 791, in Chat
+    result = langgraph_workflow.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 691, in response_generation_node
+    response = chain.invoke({})
+               ^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\runnables\base.py", line 3141, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\prompts\base.py", line 217, in invoke
+    return self._call_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\runnables\base.py", line 2058, in _call_with_config
+    context.run(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\runnables\config.py", line 433, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\prompts\base.py", line 190, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\prompts\base.py", line 184, in _validate_input
+    raise KeyError(
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'"query"\', \'"response"\'}.  Expected: [\'"query"\', \'"response"\'] Received: []\nNote: if you intended {"query"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{"query"}}\'.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/INVALID_PROMPT_INPUT '
+During task with name 'response_generation' and id '93267423-05a6-bc12-a78b-cffe67601fdc'
+2025-12-11 11:25:48,412 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:26:17,593 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:26:30,286 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:26:30,288 - travel - ERROR - React LangGraph chat错误: 'Input to ChatPromptTemplate is missing variables {\'"query"\'}.  Expected: [\'"query"\'] Received: []\nNote: if you intended {"query"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{"query"}}\'.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/INVALID_PROMPT_INPUT '
+2025-12-11 11:26:30,288 - travel - ERROR - 'Input to ChatPromptTemplate is missing variables {\'"query"\'}.  Expected: [\'"query"\'] Received: []\nNote: if you intended {"query"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{"query"}}\'.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/INVALID_PROMPT_INPUT '
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 791, in Chat
+    result = langgraph_workflow.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 691, in response_generation_node
+    response = chain.invoke({})
+               ^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\runnables\base.py", line 3141, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\prompts\base.py", line 217, in invoke
+    return self._call_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\runnables\base.py", line 2058, in _call_with_config
+    context.run(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\runnables\config.py", line 433, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\prompts\base.py", line 190, in _format_prompt_with_error_handling
+    inner_input_ = self._validate_input(inner_input)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\prompts\base.py", line 184, in _validate_input
+    raise KeyError(
+KeyError: 'Input to ChatPromptTemplate is missing variables {\'"query"\'}.  Expected: [\'"query"\'] Received: []\nNote: if you intended {"query"} to be part of the string and not a variable, please escape it with double curly braces like: \'{{"query"}}\'.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/INVALID_PROMPT_INPUT '
+During task with name 'response_generation' and id 'c4d51161-7927-2735-8653-d7c2502e1e8b'
+2025-12-11 11:39:41,826 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 11:39:44,328 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 11:39:44,328 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 11:39:44,329 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:39:44,329 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 177, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:39:46,814 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 11:40:10,693 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:40:10,701 - travel - ERROR - SQL执行错误: (pymysql.err.ProgrammingError) (1146, "Table 'travel.scenic_spots' doesn't exist")
+[SQL: SELECT * FROM scenic_spots WHERE city="北京"]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 11:40:27,985 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:40:33,073 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:40:42,653 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:40:59,194 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:41:24,913 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:41:44,434 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:41:57,529 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:42:08,140 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:42:32,752 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:42:35,548 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:42:42,428 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:42:45,947 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:42:48,112 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:55:13,062 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 11:55:15,693 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 11:55:15,693 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\app.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 11:55:15,695 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:55:15,695 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\app.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\app.py", line 177, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:55:18,271 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 11:55:33,034 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 11:55:35,563 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 11:55:35,563 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\app.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 11:55:35,564 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:55:35,564 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\app.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\app.py", line 177, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:55:38,248 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 11:56:02,238 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 11:56:04,881 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 11:56:04,881 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 11:56:04,882 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:56:04,882 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 177, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 11:56:07,595 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 11:56:32,381 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:56:50,485 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:56:58,484 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:57:11,228 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:57:33,247 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:57:33,250 - travel - ERROR - SQL执行错误: (pymysql.err.ProgrammingError) (1146, "Table 'travel.scenic_spots' doesn't exist")
+[SQL: SELECT * FROM scenic_spots WHERE city="北京"]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 11:57:36,824 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:57:54,692 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 11:58:02,995 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:44:36,394 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 15:44:39,409 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 15:44:39,410 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 15:44:39,412 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 15:44:39,412 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 177, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 15:44:41,978 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 15:45:07,000 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:45:07,018 - travel - ERROR - SQL执行错误: (pymysql.err.ProgrammingError) (1146, "Table 'travel.scenic_spots' doesn't exist")
+[SQL: SELECT * FROM scenic_spots WHERE city="北京"]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 15:45:15,342 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:45:35,071 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:45:51,824 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:47:18,159 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 15:47:21,058 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 15:47:21,058 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 15:47:21,060 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 15:47:21,060 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 137, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 177, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 15:47:23,923 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 15:47:46,030 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:47:53,286 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:47:55,695 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:47:57,957 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:48:57,866 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:49:18,336 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:49:25,861 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 15:49:35,618 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:00:32,281 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:00:41,579 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:00:53,387 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:00:58,292 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:11:03,033 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 16:11:05,508 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 16:11:05,508 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 136, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 16:11:05,510 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 16:11:05,510 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 136, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 176, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 16:11:08,182 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 16:11:28,905 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:11:34,758 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:11:42,161 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:11:43,760 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:12:45,412 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:13:10,380 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:13:24,443 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:13:42,213 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-12-11 16:13:42,213 - travel - ERROR - React LangGraph chat错误: Error code: 400 - {'error': {'message': 'Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content', 'type': 'data_inspection_failed', 'param': None, 'code': 'data_inspection_failed'}, 'id': 'chatcmpl-101c806b-5299-4b85-8b6f-d4ce9e9c025c', 'request_id': '101c806b-5299-4b85-8b6f-d4ce9e9c025c'}
+2025-12-11 16:13:42,213 - travel - ERROR - Error code: 400 - {'error': {'message': 'Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content', 'type': 'data_inspection_failed', 'param': None, 'code': 'data_inspection_failed'}, 'id': 'chatcmpl-101c806b-5299-4b85-8b6f-d4ce9e9c025c', 'request_id': '101c806b-5299-4b85-8b6f-d4ce9e9c025c'}
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 722, in Chat
+    result = langgraph_workflow.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 619, in response_generation_node
+    response = chain.invoke({
+               ^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\runnables\base.py", line 3143, in invoke
+    input_ = context.run(step.invoke, input_, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\language_models\chat_models.py", line 398, in invoke
+    self.generate_prompt(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1117, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\language_models\chat_models.py", line 927, in generate
+    self._generate_with_cache(
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1221, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_openai\chat_models\base.py", line 1370, in _generate
+    raise e
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_openai\chat_models\base.py", line 1365, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\openai\_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1192, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\openai\_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\openai\_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content', 'type': 'data_inspection_failed', 'param': None, 'code': 'data_inspection_failed'}, 'id': 'chatcmpl-101c806b-5299-4b85-8b6f-d4ce9e9c025c', 'request_id': '101c806b-5299-4b85-8b6f-d4ce9e9c025c'}
+During task with name 'response_generation' and id 'ad8cf86b-c5b9-fbb8-5ee0-cbdc9c0852eb'
+2025-12-11 16:14:48,763 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:15:26,476 - dashscope - ERROR - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/rerank/text-rerank/text-rerank (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021B56CB5650>: Failed to establish a new connection: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。'))
+2025-12-11 16:15:26,569 - openai._base_client - INFO - Retrying request to /chat/completions in 0.472037 seconds
+2025-12-11 16:15:38,977 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:15:47,756 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:15:59,763 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:17:25,616 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:17:55,239 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:18:35,382 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:18:58,466 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:35:10,321 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 16:35:13,290 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 16:35:13,290 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 136, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 16:35:13,293 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 16:35:13,293 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 136, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 176, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 16:35:16,439 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 16:35:30,180 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:35:59,330 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:36:05,748 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:36:19,485 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:37:40,620 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:37:45,063 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:37:49,911 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:37:51,039 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:38:18,059 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 16:38:21,031 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 16:38:21,032 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 136, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 16:38:21,033 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 16:38:21,033 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 136, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 176, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 16:38:24,130 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 16:38:50,751 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:39:58,539 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-11 16:40:01,532 - travel - ERROR - 添加文件到知识库失败：File is not a zip file
+2025-12-11 16:40:01,532 - travel - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 136, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2025-12-11 16:40:01,534 - travel - ERROR - 重置数据库失败：[WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 16:40:01,534 - travel - ERROR - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 136, in text_spliter_add
+    doc = loader.load()
+          ^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\langchain_community\document_loaders\word_document.py", line 61, in load
+    page_content=docx2txt.process(self.file_path),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\moxingxunihuanjing\mash4\Lib\site-packages\docx2txt\docx2txt.py", line 76, in process
+    zipf = zipfile.ZipFile(docx)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\zipfile.py", line 1312, in __init__
+    self._RealGetContents()
+  File "D:\python\Lib\zipfile.py", line 1379, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythonlianxi\day23\基于langchian的智慧工厂知识助手实战\xianmu\main.py", line 176, in text_spliter_add
+    shutil.rmtree(kb_dir)
+  File "D:\python\Lib\shutil.py", line 787, in rmtree
+    return _rmtree_unsafe(path, onerror)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\shutil.py", line 634, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "D:\python\Lib\shutil.py", line 632, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\pythonlianxi\\day23\\基于langchian的智慧工厂知识助手实战\\xianmu\\xiangliang\\chroma.sqlite3'
+2025-12-11 16:40:04,660 - travel - INFO - LangGraph工作流初始化成功
+2025-12-11 16:40:19,934 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:40:33,869 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:40:36,809 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:40:43,462 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:41:21,025 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:41:40,165 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:41:52,494 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:42:06,365 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:51:12,146 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:51:30,896 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:51:38,976 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-11 16:51:46,103 - httpx - INFO - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"

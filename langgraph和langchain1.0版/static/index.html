@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI旅游助手</title>
+    <link rel="stylesheet" href="/static/live2d/waifu.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            background: #f5f5f5;
+            overflow: hidden;
+        }
+        /* 左侧功能栏 */
+        .sidebar {
+            width: 220px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #34495e;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            padding: 0 10px;
+        }
+        .sidebar-btn {
+            background: #34495e;
+            border: none;
+            color: white;
+            padding: 12px 15px;
+            margin: 0 10px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+        .sidebar-btn:hover {
+            background: #4a6fa5;
+        }
+        /* 主内容区 */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow: hidden;
+            margin-left: 250px; /* 为Live2D留出空间 */
+        }
+        .chat-container {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+        .message {
+            max-width: 80%;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 18px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        .user {
+            align-self: flex-end;
+            background: #3498db;
+            color: white;
+        }
+        .ai {
+            align-self: flex-start;
+            background: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        /* 多个来源容器 */
+        .sources-container {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* 单个来源样式 */
+        .source-info {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            cursor: help;
+            position: relative;
+            display: inline-block;
+            background: #f9f9f9;
+            padding: 6px 10px;
+            border-radius: 4px;
+            border-left: 2px solid #3498db;
+        }
+        .source-info:hover .source-tooltip {
+            display: block;
+        }
+        .source-tooltip {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #3498db;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            max-width: 300px;
+            white-space: pre-wrap;
+            z-index: 10;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+        .input-area input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+        }
+        .input-area button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .input-area button:hover {
+            background: #2c80b9;
+        }
+
+        /* Live2D固定位置 */
+        #waifu {
+            position: fixed;
+            left: 220px;
+            bottom: 100px;
+            width: 250px;
+            z-index: 999;
+        }
+
+        /* 滚动条美化 */
+        .chat-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .chat-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .chat-container::-webkit-scrollbar-thumb {
+            background: #bdc3c7;
+            border-radius: 4px;
+        }
+        .chat-container::-webkit-scrollbar-thumb:hover {
+            background: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <!-- 左侧功能栏 -->
+    <div class="sidebar">
+        <h2>旅游助手</h2>
+        <button class="sidebar-btn" id="clear-btn">清空对话</button>
+<!--                <button class="sidebar-btn" id="upload-btn">上传文档</button>-->
+        <button class="sidebar-btn" id="logout-btn">退出登录</button>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+        <div class="chat-container" id="chat-container">
+            <!-- 对话历史将动态填充 -->
+        </div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="输入您的旅游问题...">
+            <button id="send-btn">发送</button>
+        </div>
+    </div>
+
+    <!-- Live2D模型 -->
+    <div id="waifu"></div>
+
+    <!-- Live2D脚本 -->
+    <script>
+        const cdnPath = "/static/live2d/";
+
+        const config = {
+            path: {
+                homePath: "/",
+                modelPath: cdnPath + "Resources/",
+                cssPath: cdnPath + "waifu.css",
+                tipsJsonPath: cdnPath + "waifu-tips.json",
+                tipsJsPath: cdnPath + "waifu-tips.js",
+                live2dCorePath: cdnPath + "Core/live2dcubismcore.js",
+                live2dSdkPath: cdnPath + "live2d-sdk.js",
+            },
+            tools: [
+                "express",
+                "switch-texture",
+                "photo",
+            ],
+            drag: {
+                enable: false,
+                direction: ["x", "y"],
+            },
+            switchType: "order",
+        };
+
+        if (screen.width >= 768) {
+            Promise.all([
+                loadExternalResource(config.path.cssPath, "css"),
+                loadExternalResource(config.path.live2dCorePath, "js"),
+                loadExternalResource(config.path.live2dSdkPath, "js"),
+                loadExternalResource(config.path.tipsJsPath, "js"),
+            ]).then(() => {
+                initWidget({
+                    waifuPath: config.path.tipsJsonPath,
+                    cdnPath: config.path.modelPath,
+                    tools: config.tools,
+                    dragEnable: config.drag.enable,
+                    dragDirection: config.drag.direction,
+                    switchType: config.switchType,
+                });
+            }).catch(err => {
+                console.warn("Live2D 加载失败:", err);
+            });
+        }
+
+        function loadExternalResource(url, type) {
+            return new Promise((resolve, reject) => {
+                let tag;
+                if (type === "css") {
+                    tag = document.createElement("link");
+                    tag.rel = "stylesheet";
+                    tag.href = url;
+                } else if (type === "js") {
+                    tag = document.createElement("script");
+                    tag.src = url;
+                }
+                if (tag) {
+                    tag.onload = () => resolve(url);
+                    tag.onerror = () => reject(url);
+                    document.head.appendChild(tag);
+                }
+            });
+        }
+
+        // DOM 元素
+        const chatContainer = document.getElementById('chat-container');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        const uploadBtn = document.getElementById('upload-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        // 滚动状态管理
+        let isUserScrolling = false;
+
+        chatContainer.addEventListener('scroll', () => {
+            const { scrollTop, scrollHeight, clientHeight } = chatContainer;
+            const distanceFromBottom = scrollHeight - scrollTop - clientHeight;
+            isUserScrolling = distanceFromBottom > 10;
+        });
+
+        // 添加消息（支持多个来源）
+        function addMessage(role, content, sources = []) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}`;
+            messageDiv.textContent = content;
+            chatContainer.appendChild(messageDiv);
+
+            // 添加多个来源信息
+            if (role === 'ai' && Array.isArray(sources) && sources.length > 0) {
+                const sourcesContainer = document.createElement('div');
+                sourcesContainer.className = 'sources-container';
+
+                sources.forEach(src => {
+                    const sourceDiv = document.createElement('div');
+                    sourceDiv.className = 'source-info';
+                    sourceDiv.innerHTML = `
+                        <span>来源: ${src.title || '未知来源'}</span>
+                        <div class="source-tooltip">${src.content || '无内容'}</div>
+                    `;
+                    sourcesContainer.appendChild(sourceDiv);
+                });
+
+                messageDiv.appendChild(sourcesContainer);
+            }
+
+            requestAnimationFrame(() => {
+                if (!isUserScrolling) {
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+            });
+        }
+
+        // 发送消息
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            addMessage('user', message);
+            userInput.value = '';
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+
+                const aiResponse = data.response || "抱歉，我无法生成回答。";
+                const sources = Array.isArray(data.sources) ? data.sources : [];
+
+                addMessage('ai', aiResponse, sources);
+
+                if (window.showLive2dText && typeof window.showLive2dText === 'function') {
+                    window.showLive2dText(aiResponse);
+                }
+            } catch (error) {
+                console.error("请求失败:", error);
+                addMessage('ai', "抱歉，服务暂时不可用，请稍后再试。");
+            }
+        }
+         // 退出登录
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await fetch('/logout', { method: 'POST' });
+                window.location.href = '/';
+            } catch (error) {
+                console.error('退出登录失败:', error);
+                window.location.href = '/';
+            }
+        });
+
+        // 事件绑定
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        clearBtn.addEventListener('click', async () => {
+            try {
+                await fetch('/clear', { method: 'POST' });
+            } catch (err) {
+                console.warn("清除后端会话失败，仅清空本地:", err);
+            }
+
+            chatContainer.innerHTML = '';
+            isUserScrolling = false;
+            addMessage('ai', "对话已清空，欢迎咨询旅游问题！");
+        });
+
+        // 初始化欢迎语
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                addMessage('ai', "您好！我是AI旅游助手，可以帮您查询景点、天气和美食推荐。");
+            }, 300);
+        });
+    </script>
+</body>
+</html>
